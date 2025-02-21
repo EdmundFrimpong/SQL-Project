@@ -9,7 +9,8 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background: #f0f0f0;
+            background: url('https://github.com/EdmundFrimpong/SQL-Project/blob/main/What_is_SQL_Database.png') no-repeat center center fixed;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,11 +20,12 @@
         }
 
         .coming-soon-container {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.8);
             padding: 50px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: relative;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .coming-soon {
@@ -41,6 +43,25 @@
             }
             100% {
                 transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .coming-soon-container {
+                padding: 30px;
+            }
+
+            .coming-soon {
+                font-size: 36px;
             }
         }
     </style>
